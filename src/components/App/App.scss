@@ -1,0 +1,19 @@
+.alerts-container {
+  bottom: 10rem;
+  left: 0;
+  margin: auto;
+  max-width: 30rem;
+  position: fixed;
+  right: 0;
+  z-index: 10000;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
+}
+
+.container {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
