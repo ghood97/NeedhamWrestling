@@ -3,6 +3,7 @@ import { Route, Redirect } from 'react-router-dom'
 import './App.scss'
 
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
+import AuthenticatedSuperRoute from '../AuthenticatedSuperRoute/AuthenticatedSuperRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
@@ -77,7 +78,7 @@ class App extends Component {
           <AuthenticatedRoute user={user} exact path='/posts/:id' render={() => (
             <Post alert={this.alert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/create-post' render={() => (
+          <AuthenticatedSuperRoute user={user} path='/create-post' render={() => (
             <PostCreate alert={this.alert} user={user} />
           )} />
           <AuthenticatedRoute user={user} path='/posts/:id/edit' render={() => (

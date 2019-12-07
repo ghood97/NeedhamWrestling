@@ -20,6 +20,13 @@ const ScheduleEdit = (props) => {
   useEffect(() => {
     Axios(`${apiUrl}/events/${props.match.params.id}`)
       .then(res => {
+        // if score is null change to empty str. Input value cant be null
+        const incoming = res.data.event
+        if (incoming.own_score === null) {
+          incoming.own_score = ''
+        } if (incoming.opp_score === null) {
+          incoming.opp_score = ''
+        }
         setEvent(res.data.event)
       })
       .catch(() => {

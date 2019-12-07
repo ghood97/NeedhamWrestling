@@ -47,6 +47,7 @@ const Home = (props) => {
 
   return (
     <div>
+      {props.user ? null : <h4 className='text-center'>Sign-up or Sign-in to view comments.</h4>}
       {posts.length < 1 ? <h1 className='text-center'>Loading...</h1> : postJsx}
     </div>
   )

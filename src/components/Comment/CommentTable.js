@@ -10,7 +10,7 @@ const CommentTable = (props) => {
       <td className="font-weight-bold tableRow text-wrap text-break col-6">{x.text}</td>
       <td className="font-weight-bold tableRow text-right col-4">{x.user.email}</td>
       <td className="font-weight-bold tableRow text-right col-4">{formatDate(new Date(x.created_at))}</td>
-      {props.user.id === x.user.id
+      {props.user.id === x.user.id || props.user.id === 1
         ? <td className="text-right col-2">
           <ButtonGroup vertical>
             <Button
@@ -32,7 +32,7 @@ const CommentTable = (props) => {
             </Button>
           </ButtonGroup>
         </td>
-        : <td className="font-weight-bold tableRow no-delete-text text-center col-2">{'Can\'t delete'}</td>}
+        : <td className="font-weight-bold tableRow no-delete-text text-center col-2"></td>}
     </tr>
   ))
 

@@ -15,9 +15,12 @@ const headerStyle = {
   }
 }
 
+const adminOptions = (
+  <Nav.Link style={headerStyle.linkStyle} href="#create-post">New Post</Nav.Link>
+)
+
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link style={headerStyle.linkStyle} href="#create-post">New Post</Nav.Link>
     <Nav.Link style={headerStyle.linkStyle} href="#change-password">Change Password</Nav.Link>
     <Nav.Link style={headerStyle.linkStyle} href="#sign-out">Sign Out</Nav.Link>
   </Fragment>
@@ -40,12 +43,13 @@ const alwaysOptions = (
 const Header = ({ user }) => (
   <Navbar collapseOnSelect sticky="top" style={headerStyle.backgroundStyle} variant="light" expand="md">
     <Navbar.Brand style={headerStyle.brandStyle} href="#home">
-      TeamNotiphy
+      Needham Wrestling
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto">
         { alwaysOptions }
+        { user && user.id === 1 ? adminOptions : null}
         { user ? authenticatedOptions : unauthenticatedOptions }
       </Nav>
     </Navbar.Collapse>

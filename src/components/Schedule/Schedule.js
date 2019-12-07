@@ -107,7 +107,7 @@ const Schedule = (props) => {
   if (width <= 576) {
     if (events.length < 1) {
       const unAuthLoading = (
-        <h1 className='text-center'>{'No events. Sign-in to add an event'}</h1>
+        <h1 className='text-center'>{'No events added yet.'}</h1>
       )
       const authLoading = (
         <div>
@@ -117,7 +117,7 @@ const Schedule = (props) => {
           </div>
         </div>
       )
-      return props.user ? authLoading : unAuthLoading
+      return props.user && props.user.id === 1 ? authLoading : unAuthLoading
     } else {
       return (
         <div>
@@ -132,7 +132,7 @@ const Schedule = (props) => {
             {modalJsx}
           </div>
           <div className="d-flex flex-row justify-content-center mt-3">
-            {props.user ? <Link to='/create-event'><Button variant='success'>New Event</Button></Link> : null}
+            {props.user && props.user.id === 1 ? <Link to='/create-event'><Button variant='success'>New Event</Button></Link> : null}
           </div>
         </div>
       )
@@ -140,7 +140,7 @@ const Schedule = (props) => {
   } else {
     if (events.length < 1) {
       const unAuthLoading = (
-        <h1 className='text-center'>{'No events. Sign-in to add an event'}</h1>
+        <h1 className='text-center'>{'No events added yet.'}</h1>
       )
       const authLoading = (
         <div>
@@ -150,11 +150,11 @@ const Schedule = (props) => {
           </div>
         </div>
       )
-      return props.user ? authLoading : unAuthLoading
+      return props.user && props.user.id === 1 ? authLoading : unAuthLoading
     } else {
       return (
         <div>
-          {props.user ? <Link to='/create-event'><Button variant='success'>New Event</Button></Link> : null}
+          {props.user && props.user.id === 1 ? <Link to='/create-event'><Button variant='success'>New Event</Button></Link> : null}
           <ScheduleTable user={props.user} events={events} handleDelete={handleDelete}/>
         </div>
       )

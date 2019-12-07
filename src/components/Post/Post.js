@@ -239,7 +239,7 @@ const Post = (props) => {
       <Card bg="light" text="black" className="my-4 post-card">
         <Card.Header>
           <div className="text-right">
-            {props.user ? (props.user.id === post.user_id ? deleteJsx : null) : null}
+            {props.user && props.user.id === post.user_id ? deleteJsx : null}
           </div>
           <h6 className="date-line">Created at: {formattedDate} | By: {post.user_email}</h6>
           <h2>{post.title}</h2>
