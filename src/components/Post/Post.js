@@ -241,7 +241,7 @@ const Post = (props) => {
           <div className="text-right">
             {props.user && props.user.id === post.user_id ? deleteJsx : null}
           </div>
-          <h6 className="date-line">Created at: {formattedDate} | By: {post.user_email}</h6>
+          <h6 className="date-line">Created at: {formattedDate} | By: {post.user_name}</h6>
           <h2>{post.title}</h2>
         </Card.Header>
         <Card.Body>
