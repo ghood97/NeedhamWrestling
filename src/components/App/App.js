@@ -7,6 +7,7 @@ import AuthenticatedSuperRoute from '../AuthenticatedSuperRoute/AuthenticatedSup
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
+import Info from '../Info/Info'
 import SignUp from '../SignUp/SignUp'
 import SignIn from '../SignIn/SignIn'
 import SignOut from '../SignOut/SignOut'
@@ -59,6 +60,9 @@ class App extends Component {
           )} />
           <Route path='/sign-in' render={() => (
             <SignIn alert={this.alert} setUser={this.setUser} />
+          )} />
+          <Route path='/info' render={() => (
+            <Info alert={this.alert} />
           )} />
           <Route exact path='/' render={() => (
             <Redirect to='/home'/>
