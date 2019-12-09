@@ -19,6 +19,8 @@ const PostForm = (props) => {
       <Form.Group controlId="text">
         <Form.Label>Text</Form.Label>
         <Form.Control
+          as='textarea'
+          rows='5'
           required
           name="text"
           value={props.post.text}
