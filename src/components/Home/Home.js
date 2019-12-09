@@ -5,6 +5,11 @@ import apiUrl from '../../apiConfig'
 import { Card, Button } from 'react-bootstrap'
 import formatDate from '../../formatDate'
 
+const postBodyStyle = {
+  maxHeight: '300px',
+  overflowY: 'auto'
+}
+
 const Home = (props) => {
   const [posts, setPosts] = useState([])
 
@@ -31,7 +36,9 @@ const Home = (props) => {
       <Card bg="secondary" text="white" key={post.id} className="my-4 posts-card">
         <Card.Header as="h2" className='font-weight-bold'>{post.title}</Card.Header>
         <Card.Body>
-          <Card.Text>{post.text}</Card.Text>
+          <div style={postBodyStyle}>
+            {post.text}
+          </div>
         </Card.Body>
         <Card.Footer className="d-flex flex-row">
           <div>
