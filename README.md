@@ -8,7 +8,7 @@ This application allows sports teams to communicate with each other and with oth
 - [Deployed API](https://needham-wrestling-api.herokuapp.com)
 - [Deployed Client](https://ghood97.github.io/NeedhamWrestling/)
 
-## Setup Steps
+## Setup Steps for Local Use
 
 1. [Fork and clone](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone) this repository.
 1. Run `npm install` to install all dependencies
@@ -70,7 +70,3 @@ DELETE | /events/:id
 - I would like to utilize a third-party api to get relative sports news
 <hr />
 
-
----
-
-## Wireframes:

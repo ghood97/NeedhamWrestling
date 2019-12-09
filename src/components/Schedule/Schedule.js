@@ -154,6 +154,7 @@ const Schedule = (props) => {
     } else {
       return (
         <div>
+          <h2 className='text-center font-weight-bold'>Upcoming events</h2>
           {props.user && props.user.id === 1 ? <Link to='/create-event'><Button variant='success'>New Event</Button></Link> : null}
           <ScheduleTable user={props.user} events={events} handleDelete={handleDelete}/>
         </div>

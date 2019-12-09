@@ -242,7 +242,7 @@ const Post = (props) => {
             {props.user && props.user.id === post.user_id ? deleteJsx : null}
           </div>
           <h6 className="date-line">Created at: {formattedDate} | By: {post.user_name}</h6>
-          <h2>{post.title}</h2>
+          <h2 className='font-weight-bold'>{post.title}</h2>
         </Card.Header>
         <Card.Body>
           <Card.Text className="card-text">
@@ -252,7 +252,7 @@ const Post = (props) => {
         <Card.Footer>
           <div className="d-flex flex-row justify-content-between mr-auto">
             <h5 className="font-weight-bolder align-self-center">Comments</h5>
-            <Button onClick={handleCreateShow} size="sm" variant="success" className="align-self-center">New</Button>
+            <Button onClick={handleCreateShow} size="sm" variant="success" className="align-self-center">Add Comment</Button>
           </div>
           <CommentTable
             user={props.user}
