@@ -4,4 +4,6 @@
 
 .card-text {
   font-size: 15px;
+  max-height: 300px;
+  overflow-y: auto;
 }

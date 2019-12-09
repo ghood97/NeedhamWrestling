@@ -36,9 +36,9 @@ const Home = (props) => {
       <Card bg="secondary" text="white" key={post.id} className="my-4 posts-card">
         <Card.Header as="h2" className='font-weight-bold'>{post.title}</Card.Header>
         <Card.Body>
-          <div style={postBodyStyle}>
+          <Card.Text style={postBodyStyle}>
             {post.text}
-          </div>
+          </Card.Text>
         </Card.Body>
         <Card.Footer className="d-flex flex-row">
           <div>
