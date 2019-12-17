@@ -16,7 +16,8 @@ class SignUp extends Component {
       password: '',
       passwordConfirmation: '',
       firstName: '',
-      lastName: ''
+      lastName: '',
+      admin: false
     }
   }
 
@@ -39,7 +40,7 @@ class SignUp extends Component {
       }))
       .then(() => history.push('/'))
       .catch(() => {
-        this.setState({ email: '', password: '', passwordConfirmation: '', firstName: '', lastName: '' })
+        this.setState({ email: '', password: '', passwordConfirmation: '', firstName: '', lastName: '', admin: false })
         alert({
           heading: 'Sign Up Failed',
           message: messages.signUpFailure,
