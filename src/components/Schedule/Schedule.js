@@ -117,7 +117,7 @@ const Schedule = (props) => {
           </div>
         </div>
       )
-      return props.user && props.user.id === 1 ? authLoading : unAuthLoading
+      return props.user && props.user.admin === true ? authLoading : unAuthLoading
     } else {
       return (
         <div>
@@ -132,7 +132,7 @@ const Schedule = (props) => {
             {modalJsx}
           </div>
           <div className="d-flex flex-row justify-content-center mt-3">
-            {props.user && props.user.id === 1 ? <Link to='/create-event'><Button variant='success'>New Event</Button></Link> : null}
+            {props.user && props.user.admin === true ? <Link to='/create-event'><Button variant='success'>New Event</Button></Link> : null}
           </div>
         </div>
       )
@@ -150,12 +150,12 @@ const Schedule = (props) => {
           </div>
         </div>
       )
-      return props.user && props.user.id === 1 ? authLoading : unAuthLoading
+      return props.user && props.user.admin === true ? authLoading : unAuthLoading
     } else {
       return (
         <div>
           <h2 className='text-center font-weight-bold'>Upcoming events</h2>
-          {props.user && props.user.id === 1 ? <Link to='/create-event'><Button variant='success'>New Event</Button></Link> : null}
+          {props.user && props.user.admin === true ? <Link to='/create-event'><Button variant='success'>New Event</Button></Link> : null}
           <ScheduleTable user={props.user} events={events} handleDelete={handleDelete}/>
         </div>
       )

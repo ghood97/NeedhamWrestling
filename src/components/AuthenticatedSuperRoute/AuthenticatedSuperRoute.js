@@ -11,14 +11,14 @@ const AuthenticatedSuperRoute = ({
   ...rest
 }) => {
   // if props include a `user` object and a `render` then create route with `render`
-  if ((user && user.id === 1) && render) {
+  if ((user && user.admin === true) && render) {
     return <Route {...rest} render={render} />
 
   // if props include a `user` object but no `render` then create route with `Component`
   // if props do not include a `user` object then redirect to home
   } else {
     return <Route {...rest} render={props =>
-      user && user.id === 1 ? <Component {...props} /> : <Redirect to='/' />
+      user && user.admin === true ? <Component {...props} /> : <Redirect to='/' />
     } />
   }
 }

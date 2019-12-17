@@ -50,7 +50,7 @@ const Header = ({ user }) => (
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto">
         { alwaysOptions }
-        { user && user.id === 1 ? adminOptions : null}
+        { user && user.admin === true ? adminOptions : null}
         { user ? authenticatedOptions : unauthenticatedOptions }
       </Nav>
     </Navbar.Collapse>

@@ -10,7 +10,7 @@ const CommentTable = (props) => {
       <td style={{ fontSize: '12px' }} className="font-weight-bold text-wrap text-break col-6">{x.text}</td>
       <td className="font-weight-bold tableRow align-bottom text-left col-4">By:<br/><em>{x.user.first_name + ' ' + x.user.last_name}</em></td>
       <td className="font-weight-bold tableRow align-bottom text-right col-4">{formatDate(new Date(x.created_at))}</td>
-      {props.user.id === x.user.id || props.user.id === 1
+      {props.user.id === x.user.id || props.user.admin === true
         ? <td className="text-right col-2">
           <ButtonGroup vertical>
             <Button
