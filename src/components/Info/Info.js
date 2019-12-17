@@ -5,7 +5,7 @@ const Info = (props) => {
     <div>
       <section>
         <h1 className='display-4 text-center'><u>How To Use This Site</u></h1>
-        <ul>
+        <ul className='font-weight-bold'>
           <h4 className='font-weight-bold'><u>Account</u></h4>
           <li>
               In the navigation bar at the top of the screen, you can sign-up for an account or sign-in.
@@ -34,13 +34,13 @@ const Info = (props) => {
       </section>
       <hr/>
       <section>
-        <ul>
+        <ul className='font-weight-bold'>
           <h4 className='font-weight-bold'><u>Navigating the app</u></h4>
           <li>
             In the navigation bar at the top, you can click on {'\'Schedule\''} to view upcoming events.
             <ul>
               <li>
-                <span className='font-weight-bold'>Note</span> On smaller screens, like an IPhone, the schedule table will display as a calendar. Dates highlighted in green are dates where we have events scheduled. You can click a green date to show more info about the events on that day.
+                <em>*Note*</em> On smaller screens, like an IPhone, the schedule table will display as a calendar. Dates highlighted in green are dates where we have events scheduled. You can click a green date to show more info about the events on that day.
               </li>
             </ul>
           </li>
