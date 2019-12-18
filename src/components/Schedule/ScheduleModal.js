@@ -48,7 +48,7 @@ const ScheduleModal = (props) => {
             <p><span className="font-weight-bold">When:</span> {x.day}, {x.date_formatted} at {time}</p>
             <p><span className="font-weight-bold">Who:</span> {x.opponent}</p>
             <p><span className="font-weight-bold">Where:</span> {x.location}</p>
-            <p><span className="font-weight-bold">Score: </span><span className={result}>{x.own_score} -- {x.opp_score}</span></p>
+            <p><span className="font-weight-bold">Score: </span><span className={result}>{x.own_score} - {x.opp_score}</span></p>
             {props.user && props.user.id === x.user_id ? btnJsx : null}
             <hr />
           </div>
