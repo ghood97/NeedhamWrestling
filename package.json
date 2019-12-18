@@ -1,6 +1,6 @@
 {
   "name": "needham-wrestling-client",
-  "homepage": "https://www.needhamwrestling.com",
+  "homepage": "https://needhamwrestling.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
