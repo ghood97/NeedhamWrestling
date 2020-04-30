@@ -45,6 +45,7 @@ const Header = ({ user }) => (
   <Navbar collapseOnSelect sticky="top" style={headerStyle.backgroundStyle} variant="light" expand="md">
     <Navbar.Brand style={headerStyle.brandStyle} href="#home">
       Needham Wrestling
+      <a target="_blank" className="ml-5" rel="noopener noreferrer" href="https://needhamwrestling.teamapp.com"><img width="150" height="50" title="Find us on Team App" alt="Find us on Team App" src="http://teamapp.com/assets/find-us-on-teamapp.png" /></a>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
