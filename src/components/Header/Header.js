@@ -47,7 +47,7 @@ const Header = ({ user }) => (
       Needham Wrestling
     </Navbar.Brand>
     <Navbar.Brand>
-      <a target="_blank" rel="noopener noreferrer" href="https://needhamwrestling.teamapp.com"><img width="150" height="50" title="Find us on Team App" alt="Find us on Team App" src="https://teamapp.com/assets/find-us-on-teamapp.png" /></a>
+      <a target="_blank" rel="noopener noreferrer" href="https://needhamwrestling.teamapp.com"><img width="150" height="50" title="Find us on Team App" alt="Find us on Team App" src="https://assets.teamapp.com/assets/app/social/find-us-on-teamapp-231137bec5248ed2abe25c47e9c9f4ec66e92c665f7dbbd04ce93d8d8c5e69e7.png" /></a>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
